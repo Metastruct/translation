@@ -172,7 +172,7 @@ end
 
 function translation.SetLanguage(lang)
 
-	lang = lang or code_to_lang[cvar:GetString()]
+	lang = lang or code_to_lang[cvar:GetString()] or "english"
 	translation.lang_override = lang
 	
 	translation.current_lang = {}
@@ -191,7 +191,7 @@ function translation.SetLanguage(lang)
 end
 
 function translation.GetLanguage()
-	return translation.lang_override or code_to_lang[cvar:GetString()]
+	return translation.lang_override or code_to_lang[cvar:GetString()] or "english"
 end
 
 translation.SetLanguage()
