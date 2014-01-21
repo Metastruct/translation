@@ -1,9 +1,21 @@
-local translation = {}
+if SERVER then
+	for _, name in pairs(file.Find("translations/*", "LUA")) do
+		AddCSLuaFile("translations/" .. name)
+	end
+	return 	
+end
 
-local cvar = GetConVar("cl_language")
-
+translation = translation or {}
 translation.known_gui_strings = translation.known_gui_strings or {}
-translation.current_lang = {}
+translation.current_lang = translation.current_lang or {}
+
+local cvar = GetConVar("gmod_language")
+
+local code_to_lang = {
+	ko = "korean",
+	en = "english",
+	ja = "japanese"
+}
 
 function translation.LanguageString(val)
 	local key = val:Trim():lower()
@@ -12,6 +24,8 @@ function translation.LanguageString(val)
 
 	return translation.current_lang[key] or val
 end
+
+translation.L = translation.LanguageString
 
 local L = translation.LanguageString
 
@@ -158,7 +172,7 @@ end
 
 function translation.SetLanguage(lang)
 
-	lang = lang or cvar:GetString()
+	lang = lang or code_to_lang[cvar:GetString()]
 	translation.lang_override = lang
 	
 	translation.current_lang = {}
@@ -169,13 +183,15 @@ function translation.SetLanguage(lang)
 		elseif file.Exists("translations/" .. lang .. ".lua", "LUA") then
 			table.Merge(translation.current_lang, CompileFile("translations/"..lang..".lua")())
 		end
+	end	
+	
+	for k,v in pairs(translation.current_lang) do
+		translation.current_lang[k:lower():Trim()] = v
 	end
 end
 
 function translation.GetLanguage()
-	return translation.lang_override or cvar:GetString()	
+	return translation.lang_override or code_to_lang[cvar:GetString()]
 end
 
 translation.SetLanguage()
-
-_G.translation  = translation
