@@ -1,4 +1,8 @@
 ﻿return {
+["Slow"] = "느리게",
+["Isometric"] = "등측도법",
+["Helicopter View"] = "핼기촬영",
+["Cinematic"] = "영화",
 ["curtime"] = "서버열린시간",
 ["Sitting"] = "탈것",
 ["in vehicle"] = "탈것",
