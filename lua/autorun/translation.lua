@@ -48,7 +48,7 @@ function translation.ShowEditor()
 	local menu_bar = vgui.Create( "DMenuBar", frame )
 	menu_bar:DockMargin( -3,-6,-3,0 ) --corrects MenuBar pos
 
-	local m1 = menu_bar:AddMenu( "File" )
+	local m1 = menu_bar:AddMenu( L"File" )
 	m1:AddOption(L"New", function() 
 		Derma_StringRequest(
 			L"New language",
