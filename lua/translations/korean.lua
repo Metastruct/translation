@@ -7,7 +7,7 @@
 ["Admin Menu"] = "어드민메뉴",
 ["Banweapons"] = "무기금지",
 ["Unban"] = "금지해제",
-["CTP"] = "3인칭",
+["CTP"] = "시점변경",
 ["Kick"] = "킥",
 ["Ban"] = "밴",
 ["Votekick"] = "투표킥", 
