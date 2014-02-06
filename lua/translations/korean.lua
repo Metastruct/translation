@@ -1,4 +1,7 @@
-﻿return { 
+﻿return {  
+["Lua"] = "루아",
+["Chat Messages"] = "채팅",
+["Settings"] = "설정",
 ["CLEANING UP SERVER"] = "서버 올클린합니다",
 ["RESETING SERVER"] = "서버 재설정합니다",
 ["RESTARTING SERVER"] = "서버 재시작합니다",
