@@ -14,7 +14,8 @@ local cvar = GetConVar("gmod_language")
 local code_to_lang = {
 	ko = "korean",
 	en = "english",
-	ja = "japanese"
+	ja = "japanese",
+	pt = "portuguese"
 }
 
 function translation.LanguageString(val)
