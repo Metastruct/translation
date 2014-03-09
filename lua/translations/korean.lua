@@ -1,4 +1,5 @@
 ﻿return {
+["legacy noclip"] = "부드러운 노클립",
 ["developer"] = "개발자",
 ["police"] = "경찰",
 ["superadmin"] = "관리자",
@@ -269,4 +270,8 @@
 ["isometric"] = "등측도법",
 ["admin menu"] = "어드민메뉴",
 ["reconnecting soon."] = "좀있다 연결",
+["gave up"] = "포기",
+["connecting"] = "연결",
+["left"] = "퇴장",
+["the server"] = "서버",
 }
