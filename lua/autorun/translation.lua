@@ -2,7 +2,7 @@ if SERVER then
 	for _, name in pairs(file.Find("translations/*", "LUA")) do
 		AddCSLuaFile("translations/" .. name)
 	end
-	return 	
+	return
 end
 
 translation = translation or {}
@@ -50,7 +50,7 @@ function translation.ShowEditor()
 	menu_bar:DockMargin( -3,-6,-3,0 ) --corrects MenuBar pos
 
 	local m1 = menu_bar:AddMenu( L"File" )
-	m1:AddOption(L"New", function() 
+	m1:AddOption(L"New", function()
 		Derma_StringRequest(
 			L"New language",
 			L"Type the name of the new language",
@@ -70,7 +70,7 @@ function translation.ShowEditor()
 	
 	for _, name in pairs(file.Find("translations/*", "DATA")) do
 		name = name:match("(.-)%.txt")
-		menu:AddOption(name, function() 
+		menu:AddOption(name, function()
 			translation.SetLanguage(name)
 			translation.ShowEditor()
 		end):SetImage("icon16/page_edit.png")
@@ -92,7 +92,7 @@ function translation.ShowEditor()
 	
 	local strings = {}
 	
-	for k,v in pairs(translation.known_gui_strings) do	
+	for k,v in pairs(translation.known_gui_strings) do
 		strings[k] = v:Trim():lower()
 	end
 	table.Merge(strings, translation.current_lang)
@@ -184,7 +184,7 @@ function translation.SetLanguage(lang)
 		elseif file.Exists("translations/" .. lang .. ".lua", "LUA") then
 			table.Merge(translation.current_lang, CompileFile("translations/"..lang..".lua")())
 		end
-	end	
+	end
 	
 	for k,v in pairs(translation.current_lang) do
 		translation.current_lang[k:lower():Trim()] = v
