@@ -1,4 +1,4 @@
-﻿return {
+return {
 ["legacy noclip"] = "부드러운 노클립",
 ["developer"] = "개발자",
 ["police"] = "경찰",
