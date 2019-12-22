@@ -15,7 +15,8 @@ local code_to_lang = {
 	ko = "korean",
 	en = "english",
 	ja = "japanese",
-	pt = "portuguese"
+	pt = "portuguese",
+	ru = "russian"
 }
 
 function translation.LanguageString(val)
