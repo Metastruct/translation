@@ -21,7 +21,7 @@ return {
 ["help"] = "помощь",
 ["run"] = "Запустить",
 ["pac volume"] = "Громкость PAC3 звуков",
-["outfit"] = "наряд",
+["outfit"] = "Наряд",
 ["#gameui_retryingconnectiontoserver3"] = "Попытка снова подключиться к серверу (3)..",
 ["are you sure you want to drop the connection?"] = "Вы уверены, что хотите сбросить соединение?",
 ["backup"] = "Pезервное копирование",
