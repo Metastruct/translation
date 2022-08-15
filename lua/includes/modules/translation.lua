@@ -16,7 +16,8 @@ local code_to_lang = {
 	en = "english",
 	ja = "japanese",
 	pt = "portuguese",
-	ru = "russian"
+	ru = "russian",
+	cs = "czech"
 }
 
 function translation.LanguageString(val)
