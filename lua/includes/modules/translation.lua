@@ -2,6 +2,7 @@ if SERVER then
 	for _, name in pairs(file.Find("translations/*", "LUA")) do
 		AddCSLuaFile("translations/" .. name)
 	end
+	AddCSLuaFile()
 	return
 end
 
